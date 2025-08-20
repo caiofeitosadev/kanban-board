@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="kanban-header">
+    <h1>Kanban Board</h1>
+  </header>
+
+  <div class="kanban-board">
+    <div class="kanban-column" id="column-todo">
+      <h2>To Do</h2>
+      <div class="kanban-list">
+        <div class="kanban-item" draggable="true">
+          Tarefa 1
+        </div>
+        <div class="kanban-item" draggable="true">
+          Tarefa 2
+        </div>
+      </div>
+    </div>
+
+    <div class="kanban-column" id="column-doing">
+      <h2>Doing</h2>
+      <div class="kanban-list">
+        <div class="kanban-item" draggable="true">
+          Tarefa 3
+          <span class="kanban-tag priority-high">Prioridade Alta</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kanban-column" id="column-done">
+      <h2>Done</h2>
+      <div class="kanban-list">
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./dist/script.js"></script>
+</body>
+
+</html>
