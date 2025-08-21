@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kanban</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -13,36 +14,53 @@
     <h1>Kanban Board</h1>
   </header>
 
-  <div class="kanban-board">
-    <div class="kanban-column" id="column-todo">
-      <h2>To Do</h2>
-      <div class="kanban-list">
-        <div class="kanban-item" draggable="true">
-          Tarefa 1
-        </div>
-        <div class="kanban-item" draggable="true">
-          Tarefa 2
-        </div>
+  <main class="kanban-board">
+    <div class="modal-form">
+      <h2>Adicionar cartão</h2>
+      <button class="close-modal-btn">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <form id="formulario">
+        <label for="title">
+          Título
+          <input type="text" name="title" id="title" required>
+        </label>
+        <button type="submit" class="submit-form">Adicionar</button>
+      </form>
+    </div>
+    <div class="kanban-column">
+      <div class="card-title">
+        <h2>To Do</h2>
+        <button class="add-card" id="add-card" data-status="todo">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <div class="kanban-list" id="todo">
       </div>
     </div>
 
-    <div class="kanban-column" id="column-doing">
-      <h2>Doing</h2>
-      <div class="kanban-list">
-        <div class="kanban-item" draggable="true">
-          Tarefa 3
-          <span class="kanban-tag priority-high">Prioridade Alta</span>
-        </div>
+    <div class="kanban-column">
+      <div class="card-title">
+        <h2>Doing</h2>
+        <button class="add-card" id="add-card" data-status="doing">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <div class="kanban-list" id="doing">
       </div>
     </div>
 
-    <div class="kanban-column" id="column-done">
-      <h2>Done</h2>
-      <div class="kanban-list">
+    <div class="kanban-column">
+      <div class="card-title">
+        <h2>Done</h2>
+        <button class="add-card" id="add-card" data-status="done">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+      <div class="kanban-list" id="done">
       </div>
     </div>
-  </div>
-
+  </main>
   <script type="module" src="./dist/script.js"></script>
 </body>
 
